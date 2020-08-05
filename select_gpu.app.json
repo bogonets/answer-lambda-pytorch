@@ -1,0 +1,55 @@
+{
+    "info": {
+        "name": "select_gpu",
+        "version": "1.0.0",
+        "category": "torch",
+        "keywords": [
+            "deep",
+            "pytorch"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "dependencies": [
+            {"type": "pip", "src": "numpy"},
+            {
+                "type": "pip", "src": "torch==1.5.0+cu101",
+                "extra": ["-f", "https://download.pytorch.org/whl/torch_stable.html"]
+            }
+        ],
+        "engines": ">=1.0.2",
+        "environment": {
+            "type": "pyenv",
+            "name": "pytorch"
+        },
+        "titles": {
+            "en": "GPU Selection",
+            "ko": "GPU 선택"
+        },
+        "descriptions": {
+            "en": "Select GPU.",
+            "ko": "GPU 선택한다."
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "props": [
+        {
+            "rule": "read_and_write",
+            "name": "gpu",
+            "default_value": "0",
+            "type": "int",
+            "required": true,
+            "title": {
+                "en": "GPU index",
+                "ko": "GPU 인덱스"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        }
+    ]
+}
