@@ -25,12 +25,12 @@ def on_init():
     device_count = torch.cuda.device_count()
 
     if device_count <= gpu:
-        sys.stderr.write(f"[select_gpus.on_init] Gpu's index is not available. (all gpus: {device_count}, select gpu: {g})")
+        sys.stderr.write(f"[select_gpus.on_init] Gpu's index is not available. (all gpus: {device_count}, select gpu: {gpu})")
         sys.stderr.flush()
         return True
 
     # Set GPU.
-    torch.cuda.set_device(g)
+    torch.cuda.set_device(gpu)
 
     return True
 
