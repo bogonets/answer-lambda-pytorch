@@ -1,5 +1,4 @@
 import sys
-import torch
 
 
 gpu = 0
@@ -17,6 +16,7 @@ def on_get(k):
 
 
 def on_init():
+    import torch
     if not torch.cuda.is_available():
         sys.stderr.write(f"[select_gpus.on_init] Pytorch Cuda is not available!.")
         sys.stderr.flush()
